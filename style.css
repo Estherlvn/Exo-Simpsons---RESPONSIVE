@@ -62,18 +62,19 @@ figure {
     color: white;
     font-size: smaller;
     background-color: rgb(77, 171, 226);;
-    padding: 5px 35px 5px 35px;
-    margin: 30px 10px auto 10px;
 }
 
 a {
     color: white;
+    text-decoration: none;
+    padding
 }
 
-.menu li{
-    text-align: center;
+.menu li {
+    text-align: ;
+    display: inline-block;
     list-style-type: none;
-    padding: 5px; 
+    padding: 20px; 
 }
 
 .profil {
