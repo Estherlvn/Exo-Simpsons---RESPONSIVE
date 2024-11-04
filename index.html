@@ -11,6 +11,8 @@
     <div id="wrapper">
       <header class="banner">
         <h2>OOoOoH PINAISE ! ...</h2>
+        <button class="burger-menu" id="burger-menu">&#9776;</button>
+        <!-- Menu Burger -->
         <figure>
           <img
             class="imageSimpsons"
@@ -21,7 +23,8 @@
       </header>
 
       <nav class="menu">
-        <ul>
+        <ul class="menu-items">
+          <!-- Classe pour gérer l'affichage du menu -->
           <li><a href="#Accueil">ACCUEIL</a></li>
           <li><a href="#Lefilm">LE FILM</a></li>
           <li><a href="#Personnage">PERSONNAGES</a></li>
@@ -93,5 +96,16 @@
         <small>&copy; 2015 The Simpsons Elan</small>
       </footer>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const burgerMenuButton = document.getElementById("burger-menu");
+        const menuItems = document.querySelector(".menu-items");
+
+        burgerMenuButton.addEventListener("click", function () {
+          menuItems.classList.toggle("active"); // Ajoute ou enlève la classe active pour afficher/masquer le menu
+        });
+      });
+    </script>
   </body>
 </html>

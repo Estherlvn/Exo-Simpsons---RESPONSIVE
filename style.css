@@ -60,11 +60,35 @@ figure {
 }
 
 .menu {
+  position: relative;
   text-decoration: none;
   color: white;
   font-size: 0.9em;
   text-align: center;
   background-color: rgb(77, 171, 226);
+}
+
+/* Bouton burger */
+.burger-menu {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 100px;
+  z-index: 10;
+}
+
+/* Styles pour les items du menu */
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
 }
 
 a {
@@ -280,6 +304,7 @@ a {
   }
 }
 
+/* Media query pour les petits écrans */
 @media (max-width: 960px) {
   .movieIMG {
     display: block;
@@ -292,5 +317,31 @@ a {
     height: 180px;
     width: 150px;
     margin: 20px 25px 10px 0;
+  }
+
+  .menu-items {
+    display: none; /* Masquer le menu sur petits écrans */
+    flex-direction: column; /* Vertical pour le menu burger */
+    position: absolute; /* Positionnement absolu */
+    bottom: 110px;
+    right: 0px; /* Aligné à droite */
+    width: 200px; /* Largeur fixe du menu */
+    background-color: rgb(77, 171, 226); /* Couleur de fond pour le menu */
+    border-radius: 5px; /* Bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour le menu */
+    z-index: 10; /* Assurez-vous que le menu est au-dessus des autres éléments */
+  }
+
+  .menu-items.active {
+    display: flex; /* Afficher le menu quand actif */
+  }
+
+  .burger-menu {
+    display: block; /* Afficher le bouton burger */
+  }
+
+  .menu-items li {
+    padding: 10px; /* Espacement pour les items de menu */
+    border-top: 1px solid #fff; /* Bordure entre les items */
   }
 }
