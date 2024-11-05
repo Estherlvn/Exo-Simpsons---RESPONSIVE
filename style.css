@@ -69,7 +69,7 @@ figure {
   background-color: rgb(77, 171, 226);
 }
 
-/* Bouton burger */
+/* Bouton menu burger */
 .burger-menu {
   display: none;
   font-size: 30px;
@@ -78,9 +78,8 @@ figure {
   color: white;
   cursor: pointer;
   position: absolute;
-  top: 0px;
-  right: 100px;
-  z-index: 10;
+  top: -2px;
+  z-index: 2;
 }
 
 /* Styles pour les items du menu */
@@ -115,7 +114,7 @@ a {
   font-size: 1em;
   padding: 10px 20px 10px 20px;
   margin: 70px 20px 20px 10px;
-  height: 560px;
+  height: auto;
 }
 
 .profil h2 {
@@ -275,10 +274,7 @@ a {
     flex-direction: column;
     font-size: 0.8em;
     padding: 10px 20px 10px 20px;
-    margin: 20px 20px 20px 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: auto;
+    margin: auto 20px;
   }
 
   .profil h2 .profil h3 {
@@ -286,8 +282,8 @@ a {
   }
 
   .photo {
-    width: 200px;
-    height: 250px;
+    width: 180px;
+    height: 230px;
   }
 
   .movieIMG img {
@@ -307,6 +303,12 @@ a {
 
 /* Media query pour les petits écrans */
 @media (max-width: 960px) {
+  .imageSimpsons {
+    object-fit: cover;
+    border-top: solid white 1px;
+    border-bottom: solid white 1px;
+  }
+
   .movieIMG {
     justify-content: center;
     margin: 10px 20px 30px 20px;
@@ -322,8 +324,7 @@ a {
     display: none; /* Masquer le menu sur petits écrans */
     flex-direction: column; /* Vertical pour le menu burger */
     position: absolute; /* Positionnement absolu */
-    bottom: 110px;
-    right: 0px; /* Aligné à droite */
+    bottom: 118px;
     width: 200px; /* Largeur fixe du menu */
     background-color: rgb(77, 171, 226); /* Couleur de fond pour le menu */
     border-radius: 5px; /* Bords arrondis */
@@ -336,11 +337,64 @@ a {
   }
 
   .burger-menu {
-    display: block; /* Afficher le bouton burger */
+    display: flex;
   }
 
   .menu-items li {
     padding: 10px; /* Espacement pour les items de menu */
     border-top: 1px solid #fff; /* Bordure entre les items */
+  }
+}
+
+@media (max-width: 640px) {
+  .burger-menu {
+    font-size: 25px;
+  }
+
+  .banner h2 {
+    font-size: 1.2em;
+  }
+
+  .article1 h1 {
+    font-size: 1.4em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .article1 p {
+    font-size: 0.9em;
+  }
+
+  .movieIMG img {
+    height: 150px;
+    width: 120px;
+    margin: 15px 15px 0px 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .banner h2 {
+    font-size: 1em;
+  }
+
+  .article1 h1 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .article1 p {
+    font-size: 0.8em;
+  }
+
+  .movieIMG img {
+    height: 150px;
+    width: 120px;
+    margin: 15px 15px 0px 0;
+  }
+
+  .photo {
+    height: 180px;
+    width: 150px;
   }
 }
